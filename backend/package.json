@@ -12,7 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@govinda03/medium-common": "file:../common",
+   "@simranchauhan/medium-common": "file:../common",
     "@prisma/client": "^6.4.0",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { prisma } from "../lib/prisma";
-import { createBlogInput, updateBlogInput } from "@govinda03/medium-common";
+import { createBlogInput, updateBlogInput } from "@simranchauhan/medium-common";
 import { authMiddleware, AuthRequest } from "../middleware/auth";
 
 

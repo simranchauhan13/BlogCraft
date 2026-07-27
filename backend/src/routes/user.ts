@@ -1,8 +1,7 @@
 import { Router } from "express";
 import { prisma } from "../lib/prisma";
 import jwt from "jsonwebtoken";
-import { signupInput, signinInput } from "@govinda03/medium-common";
-
+import { signupInput, signinInput } from "@simranchauhan/medium-common";
 export const userRouter = Router();
 
 
