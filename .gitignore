@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# environment
+.env
+
+# build output
+dist/
+build/
+
+backend_old/
+# generated javascript from typescript
+*.js
+*.js.map
+*.d.ts
+*.d.ts.map

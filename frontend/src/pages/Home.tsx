@@ -4,28 +4,29 @@ import Footer from "../components/Footer";
 import { ArrowRight } from 'lucide-react'
 import {jwtDecode,JwtPayload} from "jwt-decode";
 import { useEffect,useState } from "react";
+
 interface CustomJwtPayload extends JwtPayload {
-    id?: number;
-    name?: string;
-  }
+  id?: number;
+  name?: string;
+}
 
 const Home = () => {
   const [user, setUser] = useState<CustomJwtPayload | null>(null);;
     
-      useEffect(() => {
-        const token = localStorage.getItem("token");
-    
-        if (token) {
-          try {
-            const decoded: CustomJwtPayload = jwtDecode<CustomJwtPayload>(token);
-            setUser(decoded);
-            setUser(decoded);
-  
-          } catch (error) {
-            console.error("Invalid token", error);
-          }
-        }
-      }, []); 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      try {
+        const decoded: CustomJwtPayload = jwtDecode<CustomJwtPayload>(token);
+        setUser(decoded);
+        // setUser(decoded);
+
+      } catch (error) {
+        console.error("Invalid token", error);
+      }
+    }
+  }, []); 
 
   return (
     <div>
@@ -64,11 +65,9 @@ const Home = () => {
               <ArrowRight className="ml-3 h-5 w-5" />
             </button>
           </Link>
-
         </div>
-        <Footer></Footer>
+      <Footer></Footer>
     </div>
-    
   );
 };
 

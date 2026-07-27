@@ -25,14 +25,17 @@ export const Blogs = () => {
 
         <div  className="flex justify-center bg-slate-50 ">
             <div className="w-3/5">
-                {blogs.map(blog => <BlogCard
-                    key={blog.id}
-                    id={blog.id}
-                    authorName={blog.author.name || "Anonymous"}
-                    title={blog.title}
-                    content={blog.content}
-                    publishedDate={format(new Date(blog.createdAt), "dd-MMM-yyyy")}
-                />)}
+                {
+                blogs
+                    .map(blog => <BlogCard
+                        key={blog.id}
+                        id={blog.id}
+                        authorName={blog.author.name || "Anonymous"}
+                        title={blog.title}
+                        content={blog.content}
+                        publishedDate={format(new Date(blog.createdAt), "dd-MMM-yyyy")}
+                    />)
+                }
             
             </div>
         </div>

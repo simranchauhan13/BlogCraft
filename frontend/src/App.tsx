@@ -6,6 +6,9 @@ import { Blogs } from "./pages/Blogs";
 import { Blog } from "./pages/Blog";
 import { Publish } from "./pages/Publish";
 import NotFound from "./pages/NotFound";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+//USER-    email-> govindarathore431@gmail.com    password-> asdfghjkl
 
 function App() {
     return (
@@ -19,6 +22,8 @@ function App() {
           <Route path="/blog/:id" element={<Blog />} />
           <Route path="/publish" element={<Publish />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         
       </BrowserRouter>

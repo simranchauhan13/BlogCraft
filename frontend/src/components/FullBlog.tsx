@@ -3,7 +3,6 @@ import { Avatar } from "./BlogCard"
 import { format } from "date-fns";
 import Header from "./Header";
 
-
 export const FullBlog = ({ blog }: {blog: Blog}) => {
     return <div>
         <Header />

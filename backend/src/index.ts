@@ -1,25 +1,32 @@
-//aiven pe dala h
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 
-import { Hono } from 'hono'
+import { userRouter } from "./routes/user";
+import { blogRouter } from "./routes/blog";
 
-import { userRouter } from './route/user'
-import { blogRouter } from './route/blog'
-import { cors } from 'hono/cors'
+dotenv.config();
 
-const app = new Hono<{
-  Bindings:{
-    DATABASE_URL:string;//we have to explicitly define the type of variable,as typescript is unable to know what is imported from toml file
-    JWT_SECRET:string;
-  }
-}>()
+const app = express();
 
-app.use('/*',cors())
-
-app.route('/api/v1/user',userRouter)
-app.route('/api/v1/blog',blogRouter)
+app.use(cors());
+app.use(express.json());
 
 
-export default app
+// Routes
+app.use("/api/v1/user", userRouter);
+app.use("/api/v1/blog", blogRouter);
 
 
+app.get("/", (req, res) => {
+    res.json({
+        message: "BlogCraft backend running 🚀"
+    });
+});
 
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
