@@ -1,0 +1,13 @@
+{
+  "name": "blogcraft",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "common"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=common && npm run build --workspace=backend",
+    "start": "npm run start --workspace=backend"
+  }
+}

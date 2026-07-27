@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@govinda03/medium-common": "^1.0.0",
+    "@simranchauhan/medium-common": "^1.0.0",
     "@headlessui/react": "^2.2.4",
     "axios": "^1.6.8",
     "date-fns": "^4.1.0",
