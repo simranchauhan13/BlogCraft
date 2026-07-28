@@ -103,6 +103,8 @@ cd frontend
 npm install
 npm run dev
 
+##Live Demo
+https://bloggcraftt.netlify.app/
 
 ## Author
 
