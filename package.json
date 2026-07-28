@@ -6,6 +6,9 @@
     "frontend",
     "common"
   ],
+  "overrides": {
+    "rollup": "4.14.2"
+  },
   "scripts": {
     "build": "npm run build --workspace=common && npm run build --workspace=backend",
     "start": "npm run start --workspace=backend"
