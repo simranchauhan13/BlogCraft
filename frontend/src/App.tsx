@@ -8,7 +8,7 @@ import { Publish } from "./pages/Publish";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-//USER-    email-> govindarathore431@gmail.com    password-> asdfghjkl
+
 
 function App() {
     return (
